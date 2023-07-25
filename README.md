@@ -13,3 +13,7 @@ I have proposed *Apache Superset* (superset) in my system architecture for the v
     - I arbitrarily invented the data for the tables on production sites and machines.
     - The previous approach is unfortunately not appropriate for easily creating larger amounts of data, such as temperature data sets from sensors in my case. That is why I created a the Python script [generation_of_sensor_readings.py](generation_of_sensor_readings.py), which generates some random data for my purpose.
     - Finally, I used the script [data_entry.sql](data_entry.sql) to enter the data into my database.
+- Once my intended data was available, I designed a sample dashboard in superset:
+    - I created a virtual data set based on the query [add_virtual_dataset.sql](implementation_in_superset/add_virtual_dataset.sql).
+    - I created various charts and added other general information to my data that I wanted to display (see [add_iso_codes.sql](implementation_in_superset/add_iso_codes.sql) and [add_usual_temperature.sql](implementation_in_superset/add_usual_temperature.sql)).
+    - A demonstration of the finished interactive dashboard can be found in [dashboard_demo.md](implementation_in_superset/dashboard_demo.md) in the form of short screen recordings.
